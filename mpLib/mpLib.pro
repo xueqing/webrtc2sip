@@ -3,8 +3,6 @@ QT -= core gui
 TARGET = mpLib
 TEMPLATE = lib
 
-CONFIG += c++11
-
 QMAKE_CXXFLAGS += \
     -DHAVE_CONFIG_H
 

@@ -7,7 +7,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 CONFIG += console
 CONFIG -= app_bundle
-CONFIG += c++11
 
 QMAKE_CXXFLAGS += \
     -DHAVE_CONFIG_H
