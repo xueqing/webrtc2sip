@@ -23,3 +23,7 @@ NEWS
 README
 stamp-h1
 webrtc2sip
+
+build
+.vscode/ipch
+*.pro.user
