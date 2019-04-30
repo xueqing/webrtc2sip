@@ -30,22 +30,22 @@ unix{
 INCLUDEPATH += \
     $$PWD/../ \
     $$PWD/../tinywrap \
-    /usr/local/include/tinysak \
-    /usr/local/include/tinynet \
-    /usr/local/include/tinyhttp \
-    /usr/local/include/tinyxcap \
-    /usr/local/include/tinyipsec \
-    /usr/local/include/tinysms \
-    /usr/local/include/tinysigcomp \
-    /usr/local/include/tinysdp \
-    /usr/local/include/tinybfcp \
-    /usr/local/include/tinymsrp \
-    /usr/local/include/tinymedia \
-    /usr/local/include/tinyrtp \
-    /usr/local/include/tinydav \
-    /usr/local/include/tinysip \
-    /usr/include/libxml2 \
-    /usr/include
+    $$PWD/../doubango/tinySAK/src \
+    $$PWD/../doubango/tinyNET/src \
+    $$PWD/../doubango/tinyHTTP/include \
+    $$PWD/../doubango/tinyXCAP/include \
+    $$PWD/../doubango/tinyIPSec/src \
+    $$PWD/../doubango/tinySMS/include \
+    $$PWD/../doubango/tinySIGCOMP/src \
+    $$PWD/../doubango/tinySDP/include \
+    $$PWD/../doubango/tinyBFCP/include \
+    $$PWD/../doubango/tinyMSRP/include \
+    $$PWD/../doubango/tinyMEDIA/include \
+    $$PWD/../doubango/tinyRTP/include \
+    $$PWD/../doubango/tinyDAV/include \
+    $$PWD/../doubango/tinySIP/include \
+    $$PWD/../include/libxml2 \
+    $$PWD/../include
 
 SOURCES += \
     $$PWD/../mp_mediaproxy.cc
@@ -73,17 +73,17 @@ LIBS += \
     -ltinySAK
 
 LIBS += \
-    -lavcodec\
+    -Llib/ffmpeg -lavcodec\
     -lswscale \
     -lavutil \
-    -lgsm \
-    -lopus \
-    -lopencore-amrnb \
-    -lvpx \
-    -lspeex \
+    -Llib/gsm -lgsm \
+    -Llib/opus -lopus \
+    -Llib/opencore-amr -lopencore-amrnb \
+    -Llib/vpx -lvpx \
+    -Llib/speex -lspeex \
     -lspeexdsp \
-    -lcrypto \
+    -Llib/openssl -lcrypto \
     -lssl \
-    -lsrtp \
+    -Llib/srtp -lsrtp \
 
 LIBS += -lxml2 -lpthread -ldl
