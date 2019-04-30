@@ -14,10 +14,10 @@ QMAKE_CXXFLAGS += \
 unix
 {
     CONFIG(debug, debug|release) {
-        LIBS += -L$$PWD/../build/debug
+        LIBS += -L$$PWD/../build/debug -L$$PWD/../doubango/build/debug
         DESTDIR = $$PWD/../build/debug
     } else {
-        LIBS += -L$$PWD/../build/release
+        LIBS += -L$$PWD/../build/release -L$$PWD/../doubango/build/release
         DESTDIR = $$PWD/../build/release
     }
 }
@@ -57,20 +57,33 @@ LIBS += \
     -ltinywrap
 
 LIBS += \
-    -L/usr/lib  \
-    -L/usr/local/lib -ltinySAK \
-    -L/usr/local/lib -ltinyNET \
-    -L/usr/local/lib -ltinyHTTP \
-    -L/usr/local/lib -ltinySIP \
-    -L/usr/local/lib -ltinyDAV \
-    -L/usr/local/lib -ltinySDP \
-    -L/usr/local/lib -ltinyBFCP \
-    -L/usr/local/lib -ltinySIGCOMP \
-    -L/usr/local/lib -ltinyMEDIA \
-    -L/usr/local/lib -ltinyXCAP \
-    -L/usr/local/lib -ltinySMS \
-    -L/usr/local/lib -ltinyMSRP \
-    -L/usr/local/lib -ltinyRTP \
-    -L/usr/local/lib -ltinyIPSec
+    -ltinySIP \
+    -ltinyDAV \
+    -ltinyRTP \
+    -ltinyMEDIA \
+    -ltinyMSRP \
+    -ltinyBFCP \
+    -ltinySDP \
+    -ltinySIGCOMP \
+    -ltinySMS \
+    -ltinyIPSec \
+    -ltinyXCAP \
+    -ltinyHTTP \
+    -ltinyNET \
+    -ltinySAK
+
+LIBS += \
+    -lavcodec\
+    -lswscale \
+    -lavutil \
+    -lgsm \
+    -lopus \
+    -lopencore-amrnb \
+    -lvpx \
+    -lspeex \
+    -lspeexdsp \
+    -lcrypto \
+    -lssl \
+    -lsrtp \
 
 LIBS += -lxml2 -lpthread -ldl
