@@ -7,9 +7,9 @@ AUTHORS
 c2c_sqlite.db*
 ChangeLog
 compile
-config.h*
-config.log
-config.status
+config.*
+!config.h
+!config.xml
 configure
 COPYING
 depcomp

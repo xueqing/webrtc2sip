@@ -5,6 +5,9 @@ TEMPLATE = lib
 
 CONFIG += c++11
 
+QMAKE_CXXFLAGS += \
+    -DHAVE_CONFIG_H
+
 unix {
     CONFIG(debug, debug|release) {
         DESTDIR = $$PWD/../build/debug
