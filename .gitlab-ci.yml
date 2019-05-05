@@ -1,0 +1,26 @@
+stages:
+  - build
+
+variables:
+  serviceName: webrtc2sip
+  INSTALL_PATH: tmpbuild--$CI_COMMIT_SHA
+
+image: xxxx/qt5.7.0-x64/
+
+.job:
+  tags:
+    - vdms1
+
+build-job:
+  extends: .job
+  stage: build
+  variables:
+    GIT_SUBMODULE_STRATEGY: recursive
+    GIT_STRATEGY: clone
+    GIT_DEPTH: "1"
+  script:
+    - test -d $INSTALL_PATH || mkdir -p $INSTALL_PATH
+    - rm -rf $INSTALL_PATH/*
+    - cp ci/* $INSTALL_PATH/
+    - cd $INSTALL_PATH
+    - ./build.sh

@@ -27,6 +27,12 @@ unix{
     INSTALLS += target
 }
 
+CI-TEST{
+    QMAKE_LFLAGS += -Wl,-rpath,$$(INSTALL_PATH)/ci-test/commonlib:$$(INSTALL_PATH)/ci-test/doubangolib:$$PWD/../doubango/thirdparties/common/lib/x86_64
+    target.path = $$(INSTALL_PATH)/ci-test
+    INSTALLS = target
+}
+
 INCLUDEPATH += \
     $$PWD/../ \
     $$PWD/../tinywrap \

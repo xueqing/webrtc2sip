@@ -19,6 +19,11 @@ unix {
     INSTALLS += target
 }
 
+CI-TEST{
+    target.path = $$(INSTALL_PATH)/ci-test/commonlib
+    INSTALLS = target
+}
+
 INCLUDEPATH += \
     $$PWD/../ \
     $$PWD/../tinywrap \
