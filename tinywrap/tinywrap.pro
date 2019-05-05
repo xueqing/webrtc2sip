@@ -22,60 +22,22 @@ unix {
 INCLUDEPATH += \
     $$PWD/../ \
     $$PWD/../tinywrap \
-    /usr/local/include/tinysak \
-    /usr/local/include/tinynet \
-    /usr/local/include/tinysak \
-    /usr/local/include/tinyhttp \
-    /usr/local/include/tinynet \
-    /usr/local/include/tinysak \
-    /usr/local/include/tinysip \
-    /usr/local/include/tinyhttp \
-    /usr/local/include/tinyipsec \
-    /usr/local/include/tinymedia \
-    /usr/local/include/tinynet \
-    /usr/local/include/tinysdp \
-    /usr/local/include/tinysigcomp \
-    /usr/local/include/tinysak \
-    /usr/local/include/tinydav \
-    /usr/local/include/tinybfcp \
-    /usr/local/include/tinyrtp \
-    /usr/local/include/tinymedia \
-    /usr/local/include/tinymsrp \
-    /usr/local/include/tinysdp \
-    /usr/local/include/tinyhttp \
-    /usr/local/include/tinynet \
-    /usr/local/include/tinysak \
-    /usr/local/include/tinysdp \
-    /usr/local/include/tinysak \
-    /usr/local/include/tinybfcp \
-    /usr/local/include/tinynet \
-    /usr/local/include/tinysak \
-    /usr/local/include/tinysigcomp \
-    /usr/local/include/tinysak \
-    /usr/local/include/tinymedia \
-    /usr/local/include/tinynet \
-    /usr/local/include/tinysdp \
-    /usr/local/include/tinysak \
-    /usr/local/include/tinyxcap \
-    /usr/local/include/tinyhttp \
-    /usr/local/include/tinynet \
-    /usr/local/include/tinysak \
-    /usr/local/include/tinysms \
-    /usr/local/include/tinysak \
-    /usr/local/include/tinymsrp \
-    /usr/local/include/tinysdp \
-    /usr/local/include/tinyhttp \
-    /usr/local/include/tinynet \
-    /usr/local/include/tinysak \
-    /usr/local/include/tinyrtp \
-    /usr/local/include/tinymedia \
-    /usr/local/include/tinynet \
-    /usr/local/include/tinysdp \
-    /usr/local/include/tinysak \
-    /usr/local/include/tinyipsec \
-    /usr/local/include/tinysak \
-    /usr/include/libxml2 \
-    /usr/include
+    $$PWD/../doubango/tinySAK/src \
+    $$PWD/../doubango/tinyNET/src \
+    $$PWD/../doubango/tinyHTTP/include \
+    $$PWD/../doubango/tinyXCAP/include \
+    $$PWD/../doubango/tinyIPSec/src \
+    $$PWD/../doubango/tinySMS/include \
+    $$PWD/../doubango/tinySIGCOMP/src \
+    $$PWD/../doubango/tinySDP/include \
+    $$PWD/../doubango/tinyBFCP/include \
+    $$PWD/../doubango/tinyMSRP/include \
+    $$PWD/../doubango/tinyMEDIA/include \
+    $$PWD/../doubango/tinyRTP/include \
+    $$PWD/../doubango/tinyDAV/include \
+    $$PWD/../doubango/tinySIP/include \
+    $$PWD/../doubango/thirdparties/common/include/libxml2 \
+    $$PWD/../doubango/thirdparties/common/include
 
 HEADERS += \
     ActionConfig.h \

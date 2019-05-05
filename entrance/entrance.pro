@@ -44,8 +44,8 @@ INCLUDEPATH += \
     $$PWD/../doubango/tinyRTP/include \
     $$PWD/../doubango/tinyDAV/include \
     $$PWD/../doubango/tinySIP/include \
-    $$PWD/../include/libxml2 \
-    $$PWD/../include
+    $$PWD/../doubango/thirdparties/common/include/libxml2 \
+    $$PWD/../doubango/thirdparties/common/include
 
 SOURCES += \
     $$PWD/../mp_mediaproxy.cc
@@ -73,17 +73,14 @@ LIBS += \
     -ltinySAK
 
 LIBS += \
-    -Llib/ffmpeg -lavcodec\
-    -lswscale \
-    -lavutil \
-    -Llib/gsm -lgsm \
-    -Llib/opus -lopus \
-    -Llib/opencore-amr -lopencore-amrnb \
-    -Llib/vpx -lvpx \
-    -Llib/speex -lspeex \
-    -lspeexdsp \
-    -Llib/openssl -lcrypto \
-    -lssl \
-    -Llib/srtp -lsrtp \
+    -L$$PWD/../doubango/thirdparties/common/lib/x86_64/ffmpeg -lavcodec -lswscale -lavutil \
+    -L$$PWD/../doubango/thirdparties/common/lib/x86_64/gsm -lgsm \
+    -L$$PWD/../doubango/thirdparties/common/lib/x86_64/opus -lopus \
+    -L$$PWD/../doubango/thirdparties/common/lib/x86_64/opencore -lopencore-amrnb \
+    -L$$PWD/../doubango/thirdparties/common/lib/x86_64/vpx -lvpx \
+    -L$$PWD/../doubango/thirdparties/common/lib/x86_64/speex -lspeex -lspeexdsp \
+    -L$$PWD/../doubango/thirdparties/common/lib/x86_64/openssl -lcrypto -lssl \
+    -L$$PWD/../doubango/thirdparties/common/lib/x86_64/srtp -lsrtp \
+    -L$$PWD/../doubango/thirdparties/common/lib/x86_64/xml2 -lxml2 -licuuc -licudata
 
-LIBS += -lxml2 -lpthread -ldl
+LIBS += -lpthread -ldl
